@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from PC_DBT_DB_RAW.jaffle_shop.orders
+    from {{ source('jaffle_shop', 'orders')}}
 )
 
 select * from orders
